@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hinglish Caption Generator</title>
+    <meta name="description" content="Generate cool Hinglish captions with emojis for Instagram using AI.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="glow-text">✨ CaptionGenie</h1>
+            <p class="subtitle">Generate killer <b>Hinglish</b> captions in seconds!</p>
+        </header>
+
+        <!-- Main Form Section -->
+        <main class="main-card glass-panel">
+            <div class="input-group">
+                <label for="topic">1. What's the post about? <span class="optional">(Optional)</span></label>
+                <input type="text" id="topic" placeholder="e.g., Goa trip with friends, Late night coding..." autocomplete="off">
+            </div>
+
+            <div class="input-group">
+                <label>2. Choose the vibe 🔥</label>
+                <div class="vibe-buttons">
+                    <button class="vibe-btn active" data-vibe="Attitude">😎 Attitude</button>
+                    <button class="vibe-btn" data-vibe="Love">❤️ Love</button>
+                    <button class="vibe-btn" data-vibe="Heartbroken">💔 Heartbroken</button>
+                    <button class="vibe-btn" data-vibe="Hustle">🚀 Hustle</button>
+                    <button class="vibe-btn" data-vibe="Sigma">🗿 Sigma Male</button>
+                    <button class="vibe-btn" data-vibe="Savage">🔪 Savage</button>
+                    <button class="vibe-btn" data-vibe="Funny">😂 Funny/Comedy</button>
+                    <button class="vibe-btn" data-vibe="Aesthetic">✨ Aesthetic</button>
+                    <button class="vibe-btn" data-vibe="Desi">🔥 Desi Swag</button>
+                    <button class="vibe-btn" data-vibe="Gym">💪 Gym Rat</button>
+                </div>
+            </div>
+
+            <button id="generateBtn" class="generate-button">
+                <span class="btn-text">Generate Captions</span>
+                <div class="loader hidden"></div>
+            </button>
+        </main>
+
+        <!-- Output Section -->
+        <section id="outputSection" class="output-section hidden">
+            <h2 class="section-title">Your Options:</h2>
+            <div id="captionsContainer" class="captions-container">
+                <!-- Captions will be injected here -->
+            </div>
+            <div id="providerBadge" class="provider-badge hidden">
+                Generated via: <span>Groq</span>
+            </div>
+        </section>
+        
+        <!-- Error Notification -->
+        <div id="errorToast" class="error-toast hidden">
+            Something went wrong. Please try again.
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
